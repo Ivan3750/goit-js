@@ -85,12 +85,13 @@ let chuVaki = [
     },
     ];
 
+function getName(array) {
+    return array.map(elem => elem.name);
+}
 
-function getName(array){
-    array.map(elem => elem.name)
+function getEyes(array) {
+    return array.map(elem => elem.eyeColor);
 }
 
 console.log(getName(chuVaki))
-
-Завдання 2
-Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
+console.log(getEyes(chuVaki))
