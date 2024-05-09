@@ -92,6 +92,11 @@ function getName(array) {
 function getEyes(array) {
     return array.map(elem => elem.eyeColor);
 }
+function getGender(array, gender) {
+    let genderArray = array.filter(elem => elem.gender === gender);
+    return genderArray.map(elem => elem.name)
+}
 
 console.log(getName(chuVaki))
 console.log(getEyes(chuVaki))
+console.log(getGender(chuVaki, "female"))
