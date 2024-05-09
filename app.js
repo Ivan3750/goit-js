@@ -99,10 +99,27 @@ function checkIsActive(array) {
     return filterArray =  array.filter(elem => elem.isActive)
 }
 
+function getEmail(array, email){
+    let arrayFind = array.find(elem => elem.email == email)
+    return arrayFind
+}
+function checkAge(array, min, max){
+    return array.filter(elem => elem.age >= min && elem.age <= max)
+
+}
+function getAllBalance(array){
+  let allBalance = array.reduce((total, current) => {
+    return total + current.balance;
+}, 0)
+    return allBalance
+}
+
+
 console.log(getName(chuVaki))
 console.log(getEyes(chuVaki))
 console.log(getGender(chuVaki, "female"))
 console.log(checkIsActive(chuVaki))
-/* Завдання 4
-Отримати масив тільки неактивних користувачів (поле isActive). */
+console.log(getEmail(chuVaki, "shereeanthony@kog.com"))
+console.log(checkAge(chuVaki, 20, 30))
+console.log(getAllBalance(chuVaki))
 
