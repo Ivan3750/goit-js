@@ -108,9 +108,11 @@ function checkAge(array, min, max){
 
 }
 function getAllBalance(array){
-  let allBalance = array.reduce((total, current) => {
-    return total + current.balance;
-}, 0)
+ 
+    let allBalance = 0
+ array.forEach(element => {
+    allBalance += element.balance
+});
     return allBalance
 }
 
@@ -122,4 +124,5 @@ console.log(checkIsActive(chuVaki))
 console.log(getEmail(chuVaki, "shereeanthony@kog.com"))
 console.log(checkAge(chuVaki, 20, 30))
 console.log(getAllBalance(chuVaki))
+
 
