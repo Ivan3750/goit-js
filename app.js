@@ -93,10 +93,16 @@ function getEyes(array) {
     return array.map(elem => elem.eyeColor);
 }
 function getGender(array, gender) {
-    let genderArray = array.filter(elem => elem.gender === gender);
-    return genderArray.map(elem => elem.name)
+    return genderArray = array.filter(elem => elem.gender === gender);
+}
+function checkIsActive(array) {
+    return filterArray =  array.filter(elem => elem.isActive)
 }
 
 console.log(getName(chuVaki))
 console.log(getEyes(chuVaki))
 console.log(getGender(chuVaki, "female"))
+console.log(checkIsActive(chuVaki))
+/* Завдання 4
+Отримати масив тільки неактивних користувачів (поле isActive). */
+
