@@ -85,4 +85,12 @@ let chuVaki = [
     },
     ];
 
-console.log(chuVaki.map(array => array.name))
+
+function getName(array){
+    array.map(elem => elem.name)
+}
+
+console.log(getName(chuVaki))
+
+Завдання 2
+Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
