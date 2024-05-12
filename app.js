@@ -84,30 +84,35 @@ let chuVaki = [
     age: 39,
     },
     ];
-
-function getName(array) {
+    function getName(array) {
+console.log(1)
     return array.map(elem => elem.name);
 }
 
 function getEyes(array) {
+    console.log(2)
     return array.map(elem => elem.eyeColor);
 }
 function getGender(array, gender) {
+    console.log(3)
     return genderArray = array.filter(elem => elem.gender === gender);
 }
 function checkIsActive(array) {
+    console.log(4)
     return filterArray =  array.filter(elem => elem.isActive)
 }
-
 function getEmail(array, email){
+    console.log(5)
     let arrayFind = array.find(elem => elem.email == email)
     return arrayFind
 }
 function checkAge(array, min, max){
+    console.log(6)
     return array.filter(elem => elem.age >= min && elem.age <= max)
 
 }
 function getAllBalance(array){
+    console.log(7)
  
     let allBalance = 0
  array.forEach(element => {
@@ -115,6 +120,37 @@ function getAllBalance(array){
 });
     return allBalance
 }
+function Friends(array, friend){
+    console.log(8)
+    return array.filter(person => person.friends.includes(friend))
+}
+function FriendsSort(array){
+    console.log(9)
+    return array.sort((a,b) => a.friends.length - b.friends.length)
+}
+
+function getSkills(array){
+    console.log(10)
+    let arraySkills = array.map(person => person.skills.toString())
+    return arraySkills.sort()
+    
+}
+
+/* 
+
+
+
+Завдання 8 
+Масив імен всіх користувачів у яких є друг із зазначеним ім'ям. 
+
+Завдання 9 
+Масив імен (поле name) людей, відсортованих в залежності від кількості їх друзів (поле friends)
+
+Завдання 10 
+Отримати масив всіх умінь всіх користувачів (поле skills), при цьому не має бути повторюваних умінь і вони повинні бути відсортовані в алфавітному порядку.*/
+
+
+
 
 
 console.log(getName(chuVaki))
@@ -124,5 +160,8 @@ console.log(checkIsActive(chuVaki))
 console.log(getEmail(chuVaki, "shereeanthony@kog.com"))
 console.log(checkAge(chuVaki, 20, 30))
 console.log(getAllBalance(chuVaki))
+console.log(Friends(chuVaki, "Briana Decker"))
+console.log(FriendsSort(chuVaki))
+console.log(getSkills(chuVaki))
 
 
